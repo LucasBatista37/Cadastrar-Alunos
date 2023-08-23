@@ -22,8 +22,11 @@
         <label for="media">Média</label>
         <input type="number" name="media" id="media">
         <br><br>
-        <button>Cadastrar</button>
+        <button class = "cad">Cadastrar</button>
         <br>
+    </form>
+    <form method="post">
+        <button type="submit" name="limpar">Limpar Dados</button>
     </form>
     </div>
     <div id="cad">
@@ -42,6 +45,11 @@
             <?php
             session_start();
             if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+                if (isset($_POST['limpar'])) {
+                    session_destroy();
+                    session_start();
+                }
+                else{
                 $nome = $_POST['nome'];
                 $idade = $_POST['idade'];
                 $serie = $_POST['serie'];
@@ -64,6 +72,7 @@
                 echo "</tr>";
             }
             }
+        }
             ?>
         </tbody>
     </table>

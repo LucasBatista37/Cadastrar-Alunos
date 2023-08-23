@@ -60,6 +60,7 @@ body {
     cursor: pointer; 
     font-weight: bold;
     font-size: 18px; 
+    margin-bottom: 20px;
 }
 
 #dados button:hover {
@@ -80,6 +81,7 @@ h2{
     border-radius: 10px; 
     max-width: 500px; 
     margin: 20px auto; 
+    margin-bottom: 20px;
 }
 
 #cad h2{
@@ -92,3 +94,9 @@ h2{
     margin-top: 20px; 
 }
 
+#limpar input {
+    margin-bottom: 20px;
+}
+#limpar {
+    margin-bottom: 20px;
+}
